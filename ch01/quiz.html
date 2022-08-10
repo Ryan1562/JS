@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// Math.floor 현재값보다 작은 정수 중에 가장 큰값 Math.floor(Math.random()*100) 0 ~ 99
+	var ran = Math.floor(Math.random()*100) + 1;
+	var cnt = 0, num =0;
+	do {
+		num = prompt("숫자를 맞춰보세요 1 ~ 100사이");
+		if (ran > num) alert("작아! 좀 더 큰수");
+		else if (ran < num) alert("커 ! 작은 수");
+		cnt++;
+	}while(ran != num);
+	document.write(cnt+"번에 정답 : "+ ran);
+</script>
+</head>
+<body>
+
+</body>
+</html>

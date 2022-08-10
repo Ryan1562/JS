@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// do ~ while을 이용한 구구단
+	var i = 2, j = 1;
+	document.write("<h2>구구단</h2><table border='1'><tr>");
+	do {
+		document.write("<th>"+i+"단</th>");		i++;
+	}while(i <= 9);
+	document.write("</tr><tr>");
+	i = 2;
+	do {
+		document.write("<td>");
+		do {
+			document.write(i+" * "+j+" = "+i*j+"<br>");
+			j++;
+		}while(j<=9);
+		document.write("</td>"); i++; j = 1;
+	}while(i <= 9);
+</script>
+</head>
+<body>
+
+</body>
+</html>

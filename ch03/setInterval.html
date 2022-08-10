@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 2초마다 large.html의 창을 띄워라
+	var time = setInterval(() => {
+		window.open("large.html","","width=350 height=350");
+	}, 2000);
+	// 10초가 지나면 2초마다 하던 작업을 정리해라
+	setTimeout(() => {
+		clearInterval(time);
+	}, 10000);
+</script>
+</head>
+<body>
+	<img alt="" src="../images/0.jpg">
+</body>
+</html>

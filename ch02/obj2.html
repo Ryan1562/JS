@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function Person(name, age, phone) { // 자바 클래스와 유사
+		this.name=name; this.age=age; this.phone=phone;
+	}
+	var p1 = new Person("길똥", 23, "010-123-1234");
+	var p2 = new Person("제니", 25, "010-1111-1234");
+	
+	document.write(p1.name+"<br>");
+	document.write(p1.age+"<br>");
+	document.write(p1["phone"]+"<p>");
+	
+	for(key in p2) { // p2의 속성을 하나씩 key에 전달
+		document.write(key + " : " + p2[key]+"<br>");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

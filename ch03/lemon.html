@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function wincl() {
+		// window.close();
+		opener.close();  // 이창을 연프로그램의 창이 닫힌다
+	}
+</script>
+</head>
+<!-- 화면이 보인 후에 3초가 지나면 wincl()함수를 수행하라 -->
+<body onload="setTimeout('wincl()', 3000)">
+	<img alt="" src="../images/3.jpg">
+</body>
+</html>

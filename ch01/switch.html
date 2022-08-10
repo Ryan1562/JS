@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var color = prompt("0 ~ 6사이의 숫자를 입력하세요", "0");
+	if (isNaN(color)) alert("혹시 바보 !!! 숫자가 아니잖아");
+	else {
+		document.write("입력한 값 : "+color);
+		switch(parseInt(color)) {  // bgColor 배경색
+		case 0 : document.bgColor = "red"; break;
+		case 1 : document.bgColor = "orange"; break;
+		case 2 : document.bgColor = "yellow"; break;
+		case 3 : document.bgColor = "green"; break;
+		case 4 : document.bgColor = "blue"; break;
+		case 5 : document.bgColor = "navy"; break;
+		case 6 : document.bgColor = "violet"; break;
+		default : alert("숫자 다시 입력해");
+		}
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

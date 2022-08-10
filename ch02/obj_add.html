@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var person = {name:"홍길동", phone:"010-1111-1234", "addr":"강남"};
+	person.age = 31;          // age속성 추가
+	person["hobby"] = "놀기";  // hobby속성 추가
+	delete(person.phone);     // phone속성 삭제
+	for (key in person) {
+		document.write(key+" : "+person[key]+"<p>");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

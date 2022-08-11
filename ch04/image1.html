@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {    // document.images.length   그림의 갯수
+		var str = "";   // document.images[i].name  인덱스 i번쨰 그림의 name
+		for (var i =0; i < document.images.length;i++) {
+			str += document.images[i].name+", ";
+		}
+		alert(str);
+	}
+</script></head>
+<body>
+<img alt="" src="../images/image10.jpg" name="체리">
+<img alt="" src="../images/image11.jpg" name="레몬">
+<img alt="" src="../images/ioi.jpg" name="IOI"><p>
+<button onclick="chk()">그림 이름보기</button>
+</body>
+</html>

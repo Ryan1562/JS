@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		var name = ["대박", "허걱", "허각", "허공", "헐 ~","쪽박"];
+		var num = Math.floor(Math.random() * name.length);
+		document.title=name[num];
+		alert(document.lastModified);  // 마지막 문서 변경 일자
+	}
+</script>
+</head>
+<body>
+	<img alt="" src="../images/2.gif" onclick="chk()">
+</body>
+</html>

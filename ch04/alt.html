@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function show() {
+		var str = "갯수 : "+document.images.length+"\n";
+		for(i = 0 ; i < document.images.length; i++) {
+			str += (i+1)+"번째 그림 : "+document.images[i].alt+"\n";
+		}
+		alert(str);
+	}
+</script>
+</head>
+<body>
+<img alt="목마" src="../images/1.gif"><br>
+<img alt="우체통" src="../images/2.gif"><br>
+<img alt="불자동차" src="../images/3.gif"><br>
+<button onclick="show()">이미지 내용</button>
+</body>
+</html>

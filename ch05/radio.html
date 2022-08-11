@@ -1,0 +1,33 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		var fruit = "좋아하는 과일\n";
+		var k = frm.fruit.value;
+		if (k) alert(fruit+k);
+		else alert("선택 안했네요")
+		/* for (var i = 0; i < frm.fruit.length; i++) {
+			if (frm.fruit[i].checked) {
+				fruit += frm.fruit[i].value;
+				break;
+			}
+		}
+		alert(fruit); */
+	}
+</script></head><body>
+<h2>좋아하는 과일을 모두 선택</h2>
+<form action="" name="frm">
+	<label for="f1">산딸기</label>
+	<input type="radio" name="fruit" id="f1" value="산딸기"><br>
+	<label for="f2">집딸기</label>
+	<input type="radio" name="fruit" id="f2" value="집딸기"><br>
+	<label for="f3">판딸기</label>
+	<input type="radio" name="fruit" id="f3" value="판딸기"><br>
+	<label for="f4">죽은딸기</label>
+	<input type="radio" name="fruit" id="f4" value="죽은딸기"><br>
+	<label for="f5">알카리딸기</label>
+	<input type="radio" name="fruit" id="f5" value="알카리딸기"><p>
+	<input type="button" value="확인" onclick="chk()">
+</form>
+</body>
+</html>

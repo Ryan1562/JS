@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">@import url("common.css");</style>
+<script type="text/javascript">
+function chk() {
+	if (!frm.name.value) { alert("이름을 입력하세요"); frm.name.focus(); return; }
+	if (!frm.age.value) { alert("나이를 입력하세요"); frm.age.focus(); return; }
+	if (!frm.gender.value) { alert("성별을 선택하시오"); return; }
+	var str = "회원정보\n";
+	str += "이름 : "+frm.name.value+"\n";	
+	str += "나이 : "+frm.age.value+"\n";	
+	str += "취미 : "+frm.hobby.value+"\n";	
+	str += "성별 : "+frm.gender.value+"\n";	
+	str += "영화 : ";
+	for (var i = 0; i < frm.movie.length; i++) {
+		if (frm.movie[i].checked) str+=frm.movie[i].value+", ";
+	}
+	alert(str);	
+}
+</script></head><body>
+<form action="" name="frm">
+<table><caption>회원 가입</caption>
+	<tr><th>이름</th><td><input type="text" name="name" autofocus="autofocus"></td></tr>
+	<tr><th>나이</th><td><input type="number" name="age"></td></tr>
+	<tr><th>취미</th><td><select name="hobby"><option>졸기<option>자기<option>울기
+		<option>짜기<option>침뱉기</select></td></tr>
+	<tr><th>성별</th><td><label for="g1">남자</label><input type="radio" name="gender" 
+		id="g1" value="남자"><br><label for="g2">여자</label><input type="radio" name="gender" 
+		id="g2" value="여자"></td></tr>
+	<tr><th>영화</th><td><label for="m1">배트맨</label><input type="checkbox" name="movie" 
+		id="m1" value="배트맨"><br><label for="m2">원더우먼</label><input type="checkbox" name="movie" 
+		id="m2" value="원더우먼"><br><label for="m3">아이언맨</label><input type="checkbox" name="movie" 
+		id="m3" value="아이언맨"><br><label for="m4">스파이더맨</label><input type="checkbox" name="movie" 
+		id="m4" value="스파이더맨"><br><label for="m5">앤티맨</label><input type="checkbox" name="movie" 
+		id="m5" value="앤티맨"></td></tr>
+	<tr><th colspan="2"><input type="button" value="확인" onclick="chk()">
+</table>
+</form>
+</body>
+</html>

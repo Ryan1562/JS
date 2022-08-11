@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* function load() { */  
+	// load가 되어야 body안에 있는 태그를 사용할 수 있음
+	window.onload = function() {
+		var h = document.createElement("h1");  // h1 태그 생성
+		var hello = document.createTextNode("안녕 친구 !"); // 문자열 안녕친구 hello이름으로 생성
+		h.appendChild(hello);  // h태그 안에 hello가 포함
+		document.body.appendChild(h);
+	}
+</script>
+</head>
+<!-- <body onload="load()"> -->
+<body>
+
+</body>
+</html>

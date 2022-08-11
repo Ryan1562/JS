@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		var movie = ["배트맨","엔티맨","슈퍼맨","스파이더맨","아이언맨","호빵맨"];
+		var index = frm.movie.selectedIndex; // 선택된 인덱스 번호
+		alert(movie[index]);
+	//	alert(frm.movie.value);
+	}
+</script>
+</head>
+<body>
+<h2>뭘 좋아해 ?</h2>
+<form action="" name="frm">
+	<select name="movie" onchange="chk()">
+		<option>배트맨<option>앤티맨<option>슈퍼맨
+		<option>스파이더맨<option>아이언맨<option>호빵맨
+	</select>
+</form>
+</body>
+</html>

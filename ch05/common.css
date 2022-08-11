@@ -1,0 +1,5 @@
+@charset "UTF-8";
+th, tr { padding: 15px; }
+caption { font-size: 30px;  font-weight: bold;  line-height: 150% }
+table { background-color: #00F5FF; border: 1px solid pink; width: 100%;  }
+body { background-color:#E6FFE6;  }

@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="common.css">
+<script type="text/javascript">
+	function chk() {
+		if (!frm.id.value) {
+			alert("아이디를 입력하세요");
+			frm.id.focus();
+			return false;  // action으로 가지 마라
+		}
+	}
+</script></head><body>
+<form action="http://www.choongang.co.kr" name="frm" 
+	onsubmit="return chk()">
+	<!-- hidden 화면에는 안보이지만 값은 전달 -->
+	<input type="hidden" name="hobby" value="놀기">
+<table><caption>로그인</caption>
+	<!-- autofocus="autofocus"맨 처음 커서가 있을 곳 표시 -->
+	<tr><th>아이디</th><td><input type="text" name="id" autofocus="autofocus"></td></tr>
+	<!-- required="required" 필수적으로 입력 안하면 에러처리 -->
+	<tr><th>암호</th><td><input type="password" name="pass"
+		required="required"></td></tr>
+	<!-- disabled="disabled" : 입력도 안되고 전달도 안됨 -->
+	<tr><th>나이</th><td><input type="number" name="age" disabled="disabled"></td></tr>
+	<!-- readonly="readonly" 입력이나 변경은 안되지만 값과 이름은 전달 -->
+	<tr><th>성별</th><td><input type="text" name="gender" value="남자" readonly="readonly"></td></tr>
+	<tr><th colspan="2"><input type="submit" value="확인"></th></tr>
+</table>
+</form>
+</body>
+</html>

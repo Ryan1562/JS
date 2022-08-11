@@ -1,0 +1,65 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	* { margin: 0; padding: 0; }
+	li { list-style: none; }
+	a { text-decoration: none; color: #000; }
+	#gallery { width: 350px; margin: 30px auto; border: 1px solid #999; box-shadow: 0 5px 5px rgba(0,0,0,0.3); }
+	h1 { text-align: center; }
+	#gallery img { border: 1px solid #666; }
+	#photo { text-align: center; } 
+	#gallery ul { width: 800px; margin: 0 auto; overflow: hidden; }
+	#photo_list ul li { width: 100px; float: left; text-align:  center; }
+	#photo_list { width: 300px; margin: 10px auto; overflow: hidden; }
+	.btn_wrap { text-align: center; }
+	.btn_wrap a { font-weight: bold; }
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var list_zone = document.getElementById("inner_list"); 
+		var list_a = list_zone.getElementsByTagName("a");
+		for(var i = 0; i < list_a.length; i++){ 
+			list_a[i].onclick = function(){ 
+				document.pic.src = this.children[0].src;
+				return false;  // 원래 anchor태그의 기능은 작동하지 마라
+			}
+		}
+		var n_btn = document.getElementById("next_btn");
+		var m_num = 0;
+		n_btn.onclick = function() {
+			if (m_num >= list_a.length -3) return false; // 뒤에 그림이 3장이면 next_btn 작동금지
+			m_num++;
+			list_zone.style.marginLeft = -100 * m_num+"px"; // 그림을 왼쪽으로 m_num만큼 그림을 이동
+			return false;
+		}
+		var b_btn = document.getElementById("before_btn"); 
+		b_btn.onclick = function(){ 
+			if(m_num <= 0) return false; 
+			m_num--; 
+			list_zone.style.marginLeft = -100 * m_num+"px"; 
+			return false; 
+		}
+	}
+</script></head><body>
+<div id="gallery">
+	<h1>과일 갤러리</h1>
+	<p id="photo"><img alt="" src="../images/0.jpg" width="320" height="300" name="pic"></p>
+	<div id="photo_list">
+		<ul id="inner_list">
+			<li><a><img src="../images/0.jpg" alt="사진0" width="100"></a></li>
+			<li><a><img src="../images/1.jpg" alt="사진1" width="100"></a></li>
+			<li><a><img src="../images/2.jpg" alt="사진2" width="100"></a></li>
+			<li><a><img src="../images/3.jpg" alt="사진3" width="100"></a></li>
+			<li><a><img src="../images/4.jpg" alt="사진4" width="100"></a></li>
+			<li><a><img src="../images/5.jpg" alt="사진5" width="100"></a></li>
+			<li><a><img src="../images/6.jpg" alt="사진6" width="100"></a></li>
+			<li><a><img src="../images/7.jpg" alt="사진7" width="100"></a></li>
+		</ul>
+	</div>
+	<p class="btn_wrap">
+		<a id="before_btn">◀</a>
+		<a id="next_btn">▶</a>
+	</p>
+</div>
+</body>
+</html>

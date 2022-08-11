@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		if (frm.name.value=="") {
+			alert("이름을 입력하세요");
+			frm.name.focus();  // focus() 커서를 그곳으로 가라
+			return;      // 현재 메서드 종료, 본래 기능 수행 금지
+		}
+		if (!frm.age.value) {
+			alert("나이를 입력하세요");
+			frm.age.focus();
+			return;
+		}
+ 		if (frm.addr.value.length==0) {
+			alert("주소를 입력하세요");
+			frm.addr.focus();
+			return;
+		} 
+	}
+</script>
+</head>
+<body>
+<h2>회원정보</h2>
+<form action="" name="frm">
+	이름 : <input type="text" name="name"><p>
+	나이 : <input type="number" name="age"><p>
+	주소 : <input type="text" name="addr" ><p>
+	<input type="button" value="확인" onclick="chk()">
+</form>
+</body>
+</html>

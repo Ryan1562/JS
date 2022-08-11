@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		var str = "좋아하는 영화\n";
+		for (var i =0; i <frm.movie.length; i++) {
+			if (frm.movie[i].selected) {
+				str+= frm.movie[i].value+",";
+			}
+		}
+		alert(str);
+	}
+</script>
+</head>
+<body>
+<h2>뭘 좋아해 ?</h2>
+<form action="" name="frm">
+	<select name="movie" multiple="multiple">
+		<option>배트맨<option>앤티맨<option>슈퍼맨
+		<option>스파이더맨<option>아이언맨<option>호빵맨
+	</select><p>
+	<input type="button" value="확인" onclick="chk()">
+</form>
+</body>
+</html>

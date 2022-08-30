@@ -2,11 +2,18 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="common.css">
 <script type="text/javascript">
-	function chk() {
+	function chk(n) {
 		if (!frm.id.value) {
 			alert("아이디를 입력하세요");
 			frm.id.focus();
 			return false;  // action으로 가지 마라
+		}
+		if (n == 1) {
+			frm.action="http://www.daum.net";
+			frm.submit();
+		} else if (n == 2) {
+			frm.action="http://www.naver.com";
+			frm.submit();
 		}
 	}
 </script></head><body>
@@ -24,7 +31,10 @@
 	<tr><th>나이</th><td><input type="number" name="age" disabled="disabled"></td></tr>
 	<!-- readonly="readonly" 입력이나 변경은 안되지만 값과 이름은 전달 -->
 	<tr><th>성별</th><td><input type="text" name="gender" value="남자" readonly="readonly"></td></tr>
-	<tr><th colspan="2"><input type="submit" value="확인"></th></tr>
+	<tr><th colspan="2"><input type="submit" value="확인">
+		<input type="button" onclick="chk(1)" value="다음">
+		<input type="button" onclick="chk(2)" value="네이놈">
+	</th></tr>
 </table>
 </form>
 </body>

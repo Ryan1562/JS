@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function load() {
+		// 문서에서 id가 t인 태그를 찾아서 변수 t라 한다
+		var t = document.getElementById("t");
+		var time = setInterval(() => {
+			var date = new Date(); // 날자와 시간
+			var tt = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+		// 변수 t안에 html로 tt에 정보를 출력	
+			t.innerHTML = tt;
+		}, 1000);
+		setTimeout(() => {
+			clearTimeout(time);
+		}, 11000);
+	}
+</script></head>
+<body onload="load()">
+	<div id="t"></div>
+</body>
+</html>

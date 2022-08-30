@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function move() {
+		var child = window.open("img1.html","","width=300 height=300");
+		child.moveTo(0,0); // 절대경로
+		setInterval(() => {
+			child.moveBy(30, 30); // 현재위치에서 x로 10픽셀, y로 10픽셀 이동
+		}, 1000);
+	}
+</script>
+</head>
+<body>
+<img alt="" src="../images/1.jpg" onclick="move()">
+</body>
+</html>
